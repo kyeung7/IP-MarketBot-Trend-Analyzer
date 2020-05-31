@@ -1,4 +1,8 @@
 # text analysis methods
+
+goodExample = []
+badExample = []
+
 def sortMostCommon():
     pass
 
