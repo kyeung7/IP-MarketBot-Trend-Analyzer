@@ -17,6 +17,7 @@ import score as score
 # authentication, access token to be revoked each repository push
 consumer_key= 'L3Jwc5ku0gIkhYoGKyGIafTHc'
 consumer_secret= 'G6wDAaufSzPrjMU3LPSm4e8l55BvVnRnK1Fh0Xk2c92DnMPy1u'
+
 access_token= 'REDACTED'
 access_token_secret='REDACTED'
 
@@ -42,10 +43,11 @@ def runBot():
     fullStr = ''
     # tweets object contains the 5 most recent and revelant tweets
     for tweet in tweets:
-        print(tweet.text)
+        #print(tweet.text)
         fullStr += format(tweet.text)
     ####print(fullStr)
-    score.interpret(goodWords, badWords, fullStr)
+    analyze.sortMostCommon(goodWords, badWords, fullStr)
+    #score.interpret(goodWords, badWords, fullStr)
     
 def format(word): #creates long strings
     tempStr = ''

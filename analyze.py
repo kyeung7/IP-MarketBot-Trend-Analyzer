@@ -4,6 +4,7 @@ goodExample = []
 badExample = []
 
 import csv
+import re #for regex.findall()
 
 def getWords():
     with open('bad_words.csv') as csvfile:
@@ -23,8 +24,13 @@ def getWords():
     ##print(goodExample)    
     return goodExample, badExample
 
-def sortMostCommon():
-    pass
+def sortMostCommon(goodWords, badWords, fullStr):
+    print(fullStr)
+
+    count = 0
+    for i in goodWords:
+        count += len(re.findall(i, fullStr))
+    print('\n '+ 'good words: '+str(count))
 
 def sortBestMatch():
     pass
