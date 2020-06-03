@@ -11,4 +11,4 @@ def interpret(goodWords, badWords, fullStr):
     print('test trend score: ' + str(marketScore))
 
 def displayResults():
-    pass
+    print("-----------------------RESULTS-------------------------")
